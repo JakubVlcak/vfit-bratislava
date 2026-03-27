@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, #006c49 0%, #10b981 100%);
+}
+
+.tonal-transition {
+  transition: background-color 0.3s ease;
+}
+
+.bloom-effect {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #71a1ff;
+  opacity: 0.15;
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.silhouette-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+  height: 80%;
+  pointer-events: none;
+}
+
+.silhouette-glow {
+  filter: drop-shadow(0 0 20px rgba(113, 161, 255, 0.4));
+}
+
+/* Flower button styles */
+.flower-btn {
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flower-btn .flower-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1.5em;
+}
+
+.flower-btn .flower-text {
+  font-size: 17px;
+  z-index: 1;
+  color: #006c49;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+.flower-btn .flower {
+  display: grid;
+  grid-template-columns: 1em 1em;
+  position: absolute;
+  transition: grid-template-columns 0.8s ease;
+}
+
+.flower-btn .flower1 { top: -12px; left: -13px; transform: rotate(5deg); }
+.flower-btn .flower2 { bottom: -5px; left: 8px; transform: rotate(35deg); }
+.flower-btn .flower3 { bottom: -15px; transform: rotate(0deg); }
+.flower-btn .flower4 { top: -14px; transform: rotate(15deg); }
+.flower-btn .flower5 { right: 11px; top: -3px; transform: rotate(25deg); }
+.flower-btn .flower6 { right: -15px; bottom: -15px; transform: rotate(30deg); }
+
+.flower-btn .petal {
+  height: 1em;
+  width: 1em;
+  border-radius: 40% 70% / 7% 90%;
+  background: linear-gradient(#10b981, #6ee7b7);
+  border: 0.5px solid #6ee7b7;
+  z-index: 0;
+  transition: width 0.8s ease, height 0.8s ease;
+}
+
+.flower-btn .petal.two { transform: rotate(90deg); }
+.flower-btn .petal.three { transform: rotate(270deg); }
+.flower-btn .petal.four { transform: rotate(180deg); }
+
+.flower-btn:hover .petal {
+  background: linear-gradient(#006c49, #10b981);
+  border: 0.5px solid #10b981;
+}
+
+.flower-btn:hover .flower {
+  grid-template-columns: 1.5em 1.5em;
+}
+
+.flower-btn:hover .flower .petal {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.flower-btn:hover .flower-text {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.flower-btn:hover .flower1 { animation: f1 15s linear infinite; }
+.flower-btn:hover .flower2 { animation: f2 13s linear 1s infinite; }
+.flower-btn:hover .flower3 { animation: f3 16s linear 1s infinite; }
+.flower-btn:hover .flower4 { animation: f4 17s linear 1s infinite; }
+.flower-btn:hover .flower5 { animation: f5 20s linear 1s infinite; }
+.flower-btn:hover .flower6 { animation: f6 15s linear 1s infinite; }
+
+@keyframes f1 { from { transform: rotate(5deg); } to { transform: rotate(365deg); } }
+@keyframes f2 { from { transform: rotate(35deg); } to { transform: rotate(-325deg); } }
+@keyframes f3 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes f4 { from { transform: rotate(15deg); } to { transform: rotate(375deg); } }
+@keyframes f5 { from { transform: rotate(25deg); } to { transform: rotate(-335deg); } }
+@keyframes f6 { from { transform: rotate(30deg); } to { transform: rotate(390deg); } }
