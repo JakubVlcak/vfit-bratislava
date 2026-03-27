@@ -78,7 +78,7 @@ export default function Navbar() {
         >
           <img
             alt="V-Fit Logo"
-            className="w-40 h-40 object-contain flex-shrink-0"
+            className="w-35 h-20 object-contain flex-shrink-0"
             src={logoImg}
           />
         
