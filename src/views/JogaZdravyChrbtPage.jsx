@@ -61,7 +61,7 @@ export default function JogaZdravyChrbtPage() {
             </span>
             <span className="inline-flex items-center gap-1 bg-primary/5 rounded-full px-4 py-2 text-sm font-bold">
               <span className="material-symbols-outlined text-primary text-base">schedule</span>
-              od 18:00
+              od 20:00
             </span>
             <span className="inline-flex items-center gap-1 bg-primary/5 rounded-full px-4 py-2 text-sm text-on-surface-variant">
               19.3.26 — 21.5.26

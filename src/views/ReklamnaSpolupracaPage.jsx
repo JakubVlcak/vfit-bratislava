@@ -26,8 +26,8 @@ export default function ReklamnaSpolupracaPage() {
               Informácie o umiestnení reklamnej plochy získate na tel. č.{' '}
               <span className="font-semibold">0903/174 885</span>,
               alebo zašlete E-mail:{' '}
-              <a href="mailto:v-fit@szm.sk" className="text-emerald-600 hover:underline font-semibold">
-                v-fit@szm.sk
+              <a href="mailto:vfit.petrzalka@gmail.com" className="text-emerald-600 hover:underline font-semibold">
+                vfit.petrzalka@gmail.com
               </a>
             </p>
 

@@ -33,7 +33,7 @@ const KURZY_ROZVRH = [
   { title: 'SM SYSTÉM — mierne pokročilí', note: 'aj pre mužov', den: 'ŠTVRTOK', cas: '17:00', termin: '19.3.26 — 21.5.26' },
   { title: 'SM SYSTÉM — začiatočníci', note: 'aj pre mužov', den: 'ŠTVRTOK', cas: '16:00', termin: '19.3.26 — 21.5.26' },
   { title: 'PILATES pre MP aj pokročilých', note: '', den: 'STREDA', cas: '18:00', termin: '18.3.26 — 20.5.26' },
-  { title: 'POWER JOGA', note: 'aj pre mužov', den: 'UTOROK', cas: '18:00', termin: '24.3.26 — 26.5.26' },
+  { title: 'POWER JOGA', note: 'aj pre mužov', den: 'UTOROK', cas: '20:00', termin: '24.3.26 — 26.5.26' },
   { title: 'JOGA pre Zdravý chrbát', note: 'aj pre mužov', den: 'ŠTVRTOK', cas: '20:00', termin: '19.3.26 — 21.5.26' },
 ]
 

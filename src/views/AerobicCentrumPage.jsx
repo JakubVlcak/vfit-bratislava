@@ -57,8 +57,7 @@ const STALE_KURZY = [
   'Joga pre všetkých',
   'Body work — formuj svoje telo',
   'Zdravý chrbát',
-  'Gravid joga',
-  'Vital senior',
+  'FIT BW'
 ]
 
 const NOVE_KURZY = [
