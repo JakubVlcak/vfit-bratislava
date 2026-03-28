@@ -36,7 +36,6 @@ const KURZY_REGULAR = [
   { title: 'SM SYSTÉM — začiatočníci', subtitle: 'aj pre mužov', den: 'ŠTVRTOK', cas: '16:00', datum: '19.3.26 — 21.5.26' },
   { title: 'PILATES pre MP aj pokročilých', subtitle: '', den: 'STREDA', cas: '18:00', datum: '18.3.26 — 20.5.26' },
   { title: 'POWER JOGA', subtitle: 'aj pre mužov', den: 'UTOROK', cas: '18:00', datum: '24.3.26 — 26.5.26' },
-  { title: 'JOGA pre Zdravý chrbát', subtitle: 'aj pre mužov', den: 'ŠTVRTOK', cas: '20:00', datum: '19.3.26 — 21.5.26' },
 ]
 
 export default function KurzyMarcaPage() {
