@@ -41,7 +41,7 @@ const ADULT_COURSES = [
     name: 'JOGA pre ZDRAVÝ CHRBÁT',
     forMen: true,
     day: 'ŠTVRTOK',
-    time: 'o 20 h',
+    time: 'o 18 h',
     dates: '19.3.26 – 21.5.26',
   },
   {
@@ -73,13 +73,6 @@ const ADULT_COURSES = [
     day: 'UTOROK',
     time: 'o 20 h',
     dates: '24.3.26 – 26.5.26',
-  },
-  {
-    name: 'JOGA pre Zdravý chrbát',
-    forMen: true,
-    day: 'ŠTVRTOK',
-    time: 'o 20 h',
-    dates: '19.3.26 – 21.5.26',
   },
 ]
 

@@ -49,7 +49,7 @@ const CONTACT_INFO = [
     title: 'Webová stránka',
     detail: (
       <a
-        href="https://www.v-fit.sk"
+        href="http://www.v-fit.sk/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-primary hover:underline"

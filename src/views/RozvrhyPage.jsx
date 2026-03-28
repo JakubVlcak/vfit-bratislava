@@ -34,7 +34,6 @@ const KURZY_ROZVRH = [
   { title: 'SM SYSTÉM — začiatočníci', note: 'aj pre mužov', den: 'ŠTVRTOK', cas: '16:00', termin: '19.3.26 — 21.5.26' },
   { title: 'PILATES pre MP aj pokročilých', note: '', den: 'STREDA', cas: '18:00', termin: '18.3.26 — 20.5.26' },
   { title: 'POWER JOGA', note: 'aj pre mužov', den: 'UTOROK', cas: '20:00', termin: '24.3.26 — 26.5.26' },
-  { title: 'JOGA pre Zdravý chrbát', note: 'aj pre mužov', den: 'ŠTVRTOK', cas: '20:00', termin: '19.3.26 — 21.5.26' },
 ]
 
 const SM_DETI_BENEFITS = [
@@ -245,8 +244,8 @@ export default function RozvrhyPage() {
           </h2>
           <p className="text-on-surface-variant leading-relaxed mb-4">
             Vo V-FIT všetko prebieha formou kurzov. Ak je kurz otvorený, je možné chodiť aj na
-            <strong> 5 vstupovú permanentku</strong> na kurzy v hodnote <strong>45 €</strong>.
-            Alebo si doplatiť zostatok lekcií po <strong>8 €</strong>.
+            <strong> 5 vstupovú permanentku</strong> na kurzy v hodnote <strong>55 €</strong>.
+            Alebo si doplatiť zostatok lekcií po <strong>10 €</strong>.
           </p>
         </div>
       </section>

@@ -93,13 +93,21 @@ export default function AkciePage() {
           <h2 className="font-headline text-3xl font-extrabold tracking-tight mb-8">
             Rehabilitačné cvičenia
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-3 gap-6 mb-8">
+            <div className="bg-surface-container-high rounded-lg p-8 text-center">
+              <p className="text-sm text-on-surface-variant font-medium mb-2">
+                30 minút
+              </p>
+              <p className="font-headline text-4xl font-extrabold text-primary">
+                18 €
+              </p>
+            </div>
             <div className="bg-surface-container-high rounded-lg p-8 text-center">
               <p className="text-sm text-on-surface-variant font-medium mb-2">
                 40 minút
               </p>
               <p className="font-headline text-4xl font-extrabold text-primary">
-                16 €
+                21 €
               </p>
             </div>
             <div className="bg-surface-container-high rounded-lg p-8 text-center">
@@ -107,7 +115,7 @@ export default function AkciePage() {
                 50 minút
               </p>
               <p className="font-headline text-4xl font-extrabold text-primary">
-                20 €
+                25 €
               </p>
             </div>
           </div>
