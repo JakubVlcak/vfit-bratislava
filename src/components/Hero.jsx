@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import client from '../sanityClient'
 import yogaAsana from '../images/yoga-asana-of-a-woman-svgrepo-com.svg'
 import yogaLotus from '../images/yoga-lotus-posture-svgrepo-com.svg'
 import yogaExercise from '../images/yoga-exercise-svgrepo-com.svg'
@@ -15,7 +17,26 @@ const YOGA_POSES = [
   { src: yogaMovement, className: 'absolute top-[25%] right-[18%] hidden md:block md:w-48 opacity-[0.22] -rotate-3' },
 ]
 
+const DEFAULTS = {
+  badge: 'športovo-relaxačné centrum od 2004',
+  heading: 'Prečo CVIČIŤ vo športovo-relaxačnom centre?',
+  headingHighlight: 'V-FIT Bratislava,',
+  description: 'Na lekcii je malý počet klientov na cvičení. Máme výborné, skúsené, certifikované lektorky a certifikované fitness tréneri, preto cviky cvičíte správne, a máte motiváciu k pravidelnému cvičeniu. Po cvičení si môžete dať MASÁŽ, PEDIKÚRU, či MANIKÚRU zatiaľ, čo Vaše dieťatko si hraje v Detskom Kútiku, alebo cvičí na detských fitness prístrojoch. Vo V-FIT vás čaká príjemné a čisté prostredie v Bratislave PRIAZNIVÉ CENY za KVALITU!',
+}
+
 export default function Hero() {
+  const [content, setContent] = useState(DEFAULTS)
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "heroSection"][0]{ badge, heading, headingHighlight, description }`)
+      .then((data) => {
+        console.log('Sanity data:', data)
+        if (data) setContent({ ...DEFAULTS, ...data })
+      })
+      .catch((err) => console.error('Sanity error:', err))
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface">
       {/* Background Elements */}
@@ -58,21 +79,15 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
         <div className="max-w-4xl">
           <span className="inline-block py-1 px-4 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">
-            športovo-relaxačné centrum od 2004
+            {content.badge}
           </span>
           <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-on-background leading-tight tracking-tighter mb-8">
-            Prečo CVIČIŤ vo{' '}
-            <span className="text-primary italic">V-FIT Bratislava,</span>{' '}
-            športovo-relaxačnom centre?
+            {content.heading.split(content.headingHighlight)[0]}
+            <span className="text-primary italic">{content.headingHighlight}</span>
+            {content.heading.split(content.headingHighlight)[1]}
           </h1>
           <p className="text-lg text-on-surface-variant/70 font-medium leading-relaxed mb-10 max-w-2xl">
-            Na lekcii je malý počet klientov na cvičení. Máme výborné, skúsené,
-            certifikované lektorky a certifikované fitness tréneri, preto cviky
-            cvičíte správne, a máte motiváciu k pravidelnému cvičeniu. Po cvičení
-            si môžete dať MASÁŽ, PEDIKÚRU, či MANIKÚRU zatiaľ, čo Vaše dieťatko
-            si hraje v Detskom Kútiku, alebo cvičí na detských fitness
-            prístrojoch. Vo V-FIT vás čaká príjemné a čisté prostredie v
-            Bratislave PRIAZNIVÉ CENY za KVALITU!
+            {content.description}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/kurzy-marca" className="signature-gradient text-on-primary px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
